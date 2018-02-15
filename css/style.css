@@ -72,12 +72,19 @@ h1, h2, h3, h4, h5, h6{
 	cursor: pointer;
 	user-select: none;
 	background-image: none;
-
-
 }
 
 .output{
 	margin: 20px   30px;
+}
+.introdatos{
+	font-family: 'Roboto', sans-serif;
+	display: inline-block;
+	text-align: center;
+	padding: 20px;
+}
+.entradas{
+	color: white;
 }
 #loader {
   position: absolute;

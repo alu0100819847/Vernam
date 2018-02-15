@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Baker Bootstrap Theme</title>
+  <title>Seguridad en Sistemas Informáticos</title>
   <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
   <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 
@@ -34,17 +34,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-                <a class="navbar-brand" href="#">Ba<span class="logo-dec">ker</span></a>
+                <a class="navbar-brand" href="index.html">SSI</a>
               </div>
               <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
-                  <li class="active"><a href="#main-header">Home</a></li>
-                  <li class=""><a href="#feature">About</a></li>
-                  <li class=""><a href="#service">Services</a></li>
-                  <li class=""><a href="#portfolio">Portfolio</a></li>
-                  <li class=""><a href="#testimonial">Testimonial</a></li>
-                  <li class=""><a href="#blog">Blog</a></li>
-                  <li class=""><a href="#contact">Contact Us</a></li>
+                  <li class="active"><a href="Vernam.html">Práctica 1</a></li>
+                  <li class=""><a href="#feature">Práctica 2</a></li>
                 </ul>
               </div>
             </div>
@@ -55,17 +50,19 @@
           <div class="container">
             <div class="row">
               <div class="banner-info text-center wow fadeIn delay-05s">
+                <h1>CIFRADO VERNAM</h1>
+                <div class="introdatos">
                 <table>
-                  <h1>CIFRADO VERNAM</h1>
                   <tr>
-                    <h3>Mensaje: </h3>
-                    <input id="original" autofocus onchange="Vernam()" placeholder="MENSAJE" size="50">
+                    <th><div style="padding: 10px 60px;"><h3>Mensaje: </h3></div></th>
+                    <td><input id="original" autofocus onchange="Vernam()" placeholder="MENSAJE" size="50"></td>
                   </tr>
                   <tr>
-                    <h3>Clave: </h3>
-                    <input id="Clave" placeholder="CLAVE (010001010100001)" size="50">
+                    <th><div style="padding: 10px 60px;"><h3>Clave: </h3></div></th>
+                    <td><input id="Clave" placeholder="CLAVE (010001010100001)" size="50"></td>
                   </tr>
                 </table>
+              </div>
                 <div class="resultados">
                 <table>
 
@@ -96,6 +93,59 @@
                 </table>
                 </div>
                 <a href="binVernam.html" class="mybtn">Mensaje Binario</a>
+                <div class="resultados">
+                  <table>
+                    <tr><th><h2>Ejemplo 1: </h2></th></tr>
+                    <tr>
+                      <th> Mensaje: </th>
+                      <td>SOL</td>
+                    </tr>
+                    <tr>
+                      <th> Mensaje Binario: </th>
+                      <td>101001110011111001100 </td>
+                    </tr>
+                    <tr>
+                      <th> Clave: </th>
+                      <td>011110000110001110011 </td>
+                    </tr>
+                    <tr>
+                      <th> Salida Binario: </th>
+                      <td>110111110101110111111</td>
+                    </tr>
+                    <tr>
+                      <th> Salida: </th>
+                      <td>oW?</td>
+                    </tr>
+                </table>
+                </div>
+
+                <div class="resultados">
+                  <table>
+                    <tr><th><h2>Ejemplo 2: </h2></th></tr>
+                    <tr>
+                      <th> Mensaje: </th>
+                      <td>[t</td>
+                    </tr>
+                    <tr>
+                      <th> Mensaje Binario: </th>
+                      <td>10110111110100 </td>
+                    </tr>
+                    <tr>
+                      <th> Clave: </th>
+                      <td>00011110100001 </td>
+                    </tr>
+                    <tr>
+                      <th> Salida Binario: </th>
+                      <td>10101001010101</td>
+                    </tr>
+                    <tr>
+                      <th> Salida: </th>
+                      <td>TU</td>
+                    </tr>
+                </table>
+                </div>
+
+
               </div>
             </div>
           </div>
