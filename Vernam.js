@@ -1,5 +1,5 @@
 function Vernam() {
-
+  noimp.innerHTML = " ";
   var str = "" + original.value;
   var key = "" + Clave.value;
   intro.innerHTML = str;
@@ -21,11 +21,12 @@ function Vernam() {
     clave.innerHTML = rand;
   }
   salidabin.innerHTML = sol;
+  noimp.innerHTML = " ";
   salida.innerHTML = frombin(sol);
 }
 
 function binVernam(){
-
+  noimp.innerHTML = " ";
   var bin = "" + original.value;
   var key = "" + Clave.value;
   if(bin.match(/^[01]*$/) && bin.length%7 == 0) {
@@ -87,19 +88,16 @@ function frombin(bin) {
   var ascii = "";
   var num = bin.length/7;
   var cont = 0;
-  console.log("de aqui para abajo \n \n")
   for(var i = 0; i < num; i++){
     var temp = "";
     for(var j = 0; j < 7; j++){
       temp = "" + temp + bin[cont];
       cont++;
     }
-    console.log("es el numero: " + temp + " ??? "+ parseInt(temp, 2));
     var dec = parseInt(temp, 2);
-    console.log("tu madre" + dec);
+    if(dec < 32 || dec == 127) noimp.innerHTML = "X";
+    console.log(dec);
     ascii = "" + ascii + String.fromCharCode(dec);
-    console.log("Numero "+dec);
-    console.log("ASCII "+ascii);
   }
   return ascii;
 }
