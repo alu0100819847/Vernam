@@ -25,6 +25,34 @@ function Vernam() {
   salida.innerHTML = frombin(sol);
 }
 
+function modVernam() {
+  noimp.innerHTML = " ";
+  var str = "" + original.value;
+  var keyAS = "" + Clave.value;
+  var key = tobin(keyAS);
+  intro.innerHTML = str;
+  var bin = tobin(str);
+  introbin.innerHTML = bin;
+  var rand = "";
+  var sol = "";
+  if(key.length==str.length*7 && key.match(/^[01]*$/)) {
+    for(var i = 0; i < bin.length; i++) {
+      sol = sol + xor(key[i], bin[i]);
+    }
+    clave.innerHTML = key;
+  }
+  else {
+    for(var i = 0; i < bin.length; i++) {
+      rand = "" + rand + getKey();
+      sol = sol + xor(rand[i], bin[i]);
+    }
+    clave.innerHTML = rand;
+  }
+  salidabin.innerHTML = sol;
+  noimp.innerHTML = " ";
+  salida.innerHTML = frombin(sol);
+}
+
 function binVernam(){
   noimp.innerHTML = " ";
   var bin = "" + original.value;
